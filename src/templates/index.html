@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Unlabs - Setup Your Room</title>
-    <meta name="description" content="Menjual Furniture" />
+    <meta name="description" content="Menjual Peralatan Ruangan" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta property="og:title" content="Unlabs - Setup Your Room" />
@@ -16,7 +16,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" href="./css/app.minify.css" />
-    <link rel="icon" href="images/design/favicon.ico" />
+    <link rel="icon" href="./images/design/favicon.ico" />
 
     <meta name="theme-color" content="#000" />
   </head>
@@ -30,13 +30,13 @@
         <dic class="flex flex-stretch items-center">
           <div class="w-56 flex items-center">
             <a href="#">
-              <img src="images/design/logo.svg" alt="Unlabs - Adalah sebuah website E-commerce">
+              <img src="images/design/logo.svg" alt="Unlabs - Adalah sebuah website E-commerce"/>
             </a>
           </div>
           <div class="w-full"></div>
           <!-- Start Menu Humberger -->
           <div class="w-auto">
-            <ul class="fixed bg-white inset-0 flex-row invisible items-center justify-center opacity-0 md:visible md:bg-transparent md:relative md:opacity-100 md:flex">
+            <ul id="menu" class="fixed bg-white inset-0 flex flex-col md:flex-row invisible items-center justify-center opacity-0 md:visible md:bg-transparent md:relative md:opacity-100">
               <li class="mx-3 py-6 md:py-0">
                 <a href="#" class="text-black hover:text-blue-300 hover:no-underline">
                   Showcase
@@ -72,14 +72,16 @@
                 </button>
               </li>      
               <li class="ml-6 mr-6">
-                <a href="cart.html" class="flex items-center justify-center w-8 h-8 text-black hover:text-blue-600">
+                <a href="cart.html" class="flex items-center justify-center w-8 h-8 text-black hover:text-blue-600 cart cart-filled">
                   <svg class="fill-current" width="29" height="25" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10.8754 19.9824C9.61762 19.9824 8.59436 21.023 8.59436 22.3021C8.59436 23.5812 9.61762 24.6218 10.8754 24.6218C12.1331 24.6218 13.1564 23.5812 13.1564 22.3021C13.1563 21.023 12.1331 19.9824 10.8754 19.9824ZM10.8754 23.3265C10.3199 23.3265 9.86796 22.8669 9.86796 22.302C9.86796 21.7371 10.3199 21.2775 10.8754 21.2775C11.4308 21.2775 11.8828 21.7371 11.8828 22.302C11.8828 22.867 11.4308 23.3265 10.8754 23.3265Z"/>
                     <path d="M18.8764 19.9824C17.6186 19.9824 16.5953 21.023 16.5953 22.3021C16.5953 23.5812 17.6186 24.6218 18.8764 24.6218C20.1342 24.6218 21.1575 23.5812 21.1575 22.3021C21.1574 21.023 20.1341 19.9824 18.8764 19.9824ZM18.8764 23.3265C18.3209 23.3265 17.869 22.8669 17.869 22.302C17.869 21.7371 18.3209 21.2775 18.8764 21.2775C19.4319 21.2775 19.8838 21.7371 19.8838 22.302C19.8838 22.867 19.4319 23.3265 18.8764 23.3265Z"/>
                     <path d="M19.438 7.76947H10.3122C9.96051 7.76947 9.67542 8.0594 9.67542 8.41707C9.67542 8.77474 9.96056 9.06467 10.3122 9.06467H19.438C19.7897 9.06467 20.0748 8.77474 20.0748 8.41707C20.0748 8.05935 19.7897 7.76947 19.438 7.76947Z"/>
                     <path d="M18.9414 11.1324H10.8089C10.4572 11.1324 10.1721 11.4223 10.1721 11.78C10.1721 12.1377 10.4572 12.4276 10.8089 12.4276H18.9413C19.293 12.4276 19.5781 12.1377 19.5781 11.78C19.5781 11.4224 19.293 11.1324 18.9414 11.1324Z"/>
                     <path d="M25.6499 4.88404C25.407 4.58092 25.0472 4.40711 24.6626 4.40711H4.82655L4.42595 2.42947C4.34232 2.01694 4.06563 1.67055 3.68565 1.50276L0.890528 0.268963C0.567841 0.126419 0.192825 0.276999 0.0528584 0.60505C-0.0872597 0.933204 0.0608116 1.31463 0.383347 1.45696L3.17852 2.69081L6.2598 17.9014C6.38117 18.5004 6.90578 18.9352 7.50723 18.9352H22.7635C23.1152 18.9352 23.4003 18.6452 23.4003 18.2876C23.4003 17.9299 23.1152 17.64 22.7635 17.64H7.50728L7.13247 15.7897H22.8814C23.4828 15.7897 24.0075 15.3549 24.1288 14.7559L25.9101 5.96349C25.9876 5.58063 25.8928 5.1871 25.6499 4.88404ZM22.8814 14.4946H6.87012L5.08895 5.70226L24.6626 5.70231L22.8814 14.4946Z"/>
-                    <circle class="cart-filled" cx="25" cy="4.89023" r="4" fill="#BCE7F0"/>
+                    <g class="text-blue-500">
+                      <circle cx="25" cy="4.89023" r="4" class="fill-current dot"/>
+                    </g>
                   </svg>                    
                 </a>
               </li>         
@@ -97,13 +99,13 @@
         <h1 class="text-3xl md:text-5xl leading-tight font-semibold">
           The Room <br class=""/>You've Dreaming
         </h1>
-        <h2 class="px-8 text-base md:px-0 md:text-lg my-6 tracking-wide">
-          Kami menyediakan furniture berkelas yang
+        <h2 class="px-8 text-sm md:px-0 md:text-lg my-6 tracking-wide">
+          Kami menyediakan <span class="text-blue-800 bold">peralatan furniture</span> terbaik yang
           <br class="hidden lg:block">
-          membuat ruangan terasa homey
+          dapat membuat mewujudkan <span class="text-blue-800 bold">room</span> impian anda
         </h2>
         <div>
-          <a href="#" class="bg-blue-400 text-black hover:bg-blue-500 hover:text-gray-100 rounded-full px-8 py-3 mt-4 inline-block flex-none transition duration-200">
+          <a href="#browse-the-room" class="bg-blue-400 text-black hover:bg-blue-500 hover:text-gray-100 rounded-full px-8 py-3 mt-4 inline-block flex-none transition duration-200">
             Explore Now
           </a>
         </div>
@@ -115,9 +117,9 @@
             <div class="overlay right-0 bottom-0 md:inset-0">
               <button class="video hero-cta focus:outline-none z-30 modal-trigger" 
               data-content='
-                <div class="w-screen pb-56 md:w-88 relative z-50">
-                  <div class="w-full h-full">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TzIO-FcDXTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="w-screen md:w-88 relative z-50">
+                  <div class="w-full h-full flex items-center justify-center">
+                    <iframe width="500px" height="300px" src="https://www.youtube.com/embed/TzIO-FcDXTg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 </div>'>
               </button>
@@ -127,6 +129,362 @@
       </div>
     </section>
     <!-- End section hero -->
+
+    <!-- Start browse room -->
+    <section class="flex bg-gray-100 py-16 px-4" id="browse-the-room">
+      <div class="container mx-auto">
+        <div class="flex flex-start mb-8">
+          <h3 class="text-2xl capitalize font-semibold">
+            Browse the room 
+            <br class=""/>
+            That we designed for you
+          </h3>
+        </div>
+        <div class="grid grid-rows-2 grid-cols-9 gap-4">
+          <!-- Start browse the room catalog - 1 -->
+          <div class="relative col-span-9 row-span-1 md:col-span-4 card" style="height: 180px;">
+            <div class="card-shadow rounded-xl">
+              <img src="./images/content/catalog-3.jpg" class="w-full h-full object-cover overlay overflow-hidden rounded-xl" alt="">
+            </div>
+            <div class="overlay left-0 top-0 bottom-0 flex justify-center flex-col pl-40 md:pl-72">
+              <h5 class="text-lg font-semibold">
+                Living Room
+              </h5>
+              <span class="text-blue-300">507 items</span>
+            </div>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!-- End browse the room catalog - 1 -->
+
+          <!-- Start browse the room catalog - 2 -->
+          <div class="relative col-span-9 row-span-1 md:col-span-2 md:row-span-2 card">
+            <div class="card-shadow rounded-xl">
+              <img src="./images/content/catalog-2.jpg" class="w-full h-full object-cover overlay overflow-hidden rounded-xl" alt="">
+            </div>
+            <div class="overlay inset-0 md:bottom-0 flex md:items-center flex-col pl-40 md:pl-0 md:pt-12">
+              <h5 class="text-lg font-semibold">
+                Decoration Room
+              </h5>
+              <span class="text-blue-300">207 items</span>
+            </div>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!-- End browse the room catalog - 2 -->
+
+          <!-- Start browse the room catalog - 3 -->
+          <div class="relative col-span-9 row-span-1 md:col-span-3 md:row-span-2 card">
+            <div class="card-shadow rounded-xl">
+              <img src="./images/content/catalog-1.jpg" class="w-full h-full object-cover overlay overflow-hidden rounded-xl" alt="">
+            </div>
+            <div class="overlay inset-0 md:bottom-0 flex md:items-center flex-col pl-40 md:pl-0 md:pt-12">
+              <h5 class="text-lg font-semibold">
+                Bed Room
+              </h5>
+              <span class="text-blue-300">700 items</span>
+            </div>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!-- End browse the room catalog - 3 -->
+
+          <!-- Start browse the room catalog - 4 -->
+          <div class="relative col-span-9 row-span-1 md:col-span-4 card" style="height: 180px;">
+            <div class="card-shadow rounded-xl">
+              <img src="./images/content/catalog-4.jpg" class="w-full h-full object-cover overlay overflow-hidden rounded-xl" alt="">
+            </div>
+            <div class="overlay left-0 top-0 bottom-0 flex justify-center flex-col pl-40 md:pl-72">
+              <h5 class="text-lg font-semibold">
+                Children Room
+              </h5>
+              <span class="text-blue-300">340 items</span>
+            </div>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!-- End browse the room catalog - 4 -->   
+        </div>
+      </div>
+    </section>
+    <!-- End browse room -->
+
+    <!-- Start Network client -->
+    <section class="section-network">
+      <div class="container py-16">
+        <div class="inset-0 flex flex-col justify-center items-center mb-3 mx-auto">
+          <h3 class="text-2xl capitalize font-semibold mb-2">Our Networks</h3>
+          <p class="text-xl text-gray-400 text-center">Kami telah didukung dari beberapa <span class="font-bold">Perusahaan</span> terkenal</p>
+        </div>
+        <div class="mx-auto">
+          <div class="flex items-center justify-center flex-wrap">
+            <div class="w-full flex-auto md:w-auto md:flex-initial px-4 my-4 md:my-10">
+              <img src="./images/content/logo-partner.png" alt="Logo Partner" class="mx-auto opacity-90"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Network client -->
+
+    <!-- Start Just Arrived -->
+    <section class="bg-gray-100 flex flex-col py-16">
+      <div class="container mx-auto mb-8">
+        <div class="flex justify-center text-center mb-4">
+          <h3 class="text-2xl capitalize font-semibold">
+            Best Product <br />
+            That we have provided for you
+          </h3>
+        </div>
+      </div>
+      <div class="overflow-x-hidden px-4" id="carousel">
+        <div class="container mx-auto"></div>
+        
+        <div class="  flex flex-row -mx-4 relative carousel">
+          <!--Start carousel product 1 -->
+          <div class="px-4 relative card">
+            <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+              <img src="../images/content/cat-product-1.jpg" alt="Catalog Product" class="w-full h-full object-cover object-center">
+            </div>
+            <h5 class="text-lg font-semibold mt-4">
+              White Chair Room
+            </h5>
+            <span class="">IDR 540.000</span>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!--End carousel product 1 -->
+
+          <!--Start carousel product 2 -->
+          <div class="px-4 relative card">
+            <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+              <img src="../images/content/cat-product-2.jpg" alt="Catalog Product" class="w-full h-full object-cover object-center">
+            </div>
+            <h5 class="text-lg font-semibold mt-4">
+              Note Book Edition x34
+            </h5>
+            <span class="">IDR 940.000</span>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!--End carousel product 2 -->
+
+          <!--Start carousel product 3 -->
+          <div class="px-4 relative card">
+            <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+              <img src="../images/content/cat-product-3.jpg" alt="Catalog Product" class="w-full h-full object-cover object-center">
+            </div>
+            <h5 class="text-lg font-semibold mt-4">
+              Rexus Chair RGC x1
+            </h5>
+            <span class="">IDR 2.540.000</span>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!--End carousel product 3 -->
+
+          <!--Start carousel product 4 -->
+          <div class="px-4 relative card">
+            <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+              <img src="../images/content/cat-product-4.jpg" alt="Catalog Product" class="w-full h-full object-cover object-center">
+            </div>
+            <h5 class="text-lg font-semibold mt-4">
+              Xbox Controller Serie X
+            </h5>
+            <span class="">IDR 567.900</span>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!--End carousel product 4 -->
+
+          <!--Start carousel product 5 -->
+          <div class="px-4 relative card">
+            <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+              <img src="../images/content/cat-product-5.jpg" alt="Catalog Product" class="w-full h-full object-cover object-center">
+            </div>
+            <h5 class="text-lg font-semibold mt-4">
+              Learning Lamp Model L
+            </h5>
+            <span class="">IDR 340.800</span>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!--End carousel product 5 -->
+
+          <!--Start carousel product 6 -->
+          <div class="px-4 relative card">
+            <div class="rounded-xl overflow-hidden card-shadow" style="width: 287px; height: 386px;">
+              <img src="../images/content/cat-product-6.jpg" alt="Catalog Product" class="w-full h-full object-cover object-center">
+            </div>
+            <h5 class="text-lg font-semibold mt-4">
+              Headset Sony Xseries
+            </h5>
+            <span class="">IDR 793.000</span>
+            <a href="details.html" class="stretched-link">
+              <!-- fake children -->
+            </a>
+          </div>
+          <!--End carousel product 6 -->
+        </div>
+      </div>
+    </section>
+    <!-- End Just Arrived -->
+
+    <!-- Start Contact us -->
+    <section class="bg-white relative px-4 py-16">
+      <div class="container mx-auto mb-8 flex flex-col">
+        <div class="flex flex-col items-center justify-center mb-4">
+          <h3 class="text-2xl font-semibold text-center capitalize mb-2">
+            Get in touch
+          </h3>
+          <p class="text-gray-800 text-center">Want to get information about some product? Let's talk.</p>
+        </div>
+      </div>
+      <div class="container mx-auto flex sm:flex-nowrap flex-wrap">
+        <div class="lg:w-2/3 md:w-1/2 rounded-lg overflow-hidden bg-gray-200 sm:mr-10 p-2 flex items-end justify-center mb-8">
+          <iframe width="100%" height="600" class="inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.2938511158745!2d106.67655231449207!3d-6.091060061448831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a0307a85bfe09%3A0x7118374856ba798b!2sDuta%20Bandara%20Permai%2C%20Kec.%20Kosambi%2C%20Tangerang%2C%20Banten!5e0!3m2!1sen!2sid!4v1612887466127!5m2!1sen!2sid" style="filter: contrast(1.2) opacity(0.6);"></iframe>
+          <div class="bg-gray-100 overlay flex flex-wrap rounded py-4 shadow-md text-sm invisible md:visible">
+            <div class="md:w-1/2 px-3">
+              <h5 class="font-semibold text-gray-800 tracking-widest">Address</h5>
+              <span class="mt-1 leading-relaxed">Jalan Perancis Tangerang, Banten</span>
+            </div>
+            <div class="md:w-1/2 px-3">
+              <h5 class="font-semibold text-gray-800 tracking-widest">Email</h5>
+              <span class="text-indigo-400 leading-relaxed">unlabs.furniture@product.com</span>
+              <h5 class="font-semibold text-gray-800 tracking-widest mt-4">Phone</h5>
+              <span class="leading-relaxed">021-000-9999</span>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2 bg-white shadow-md p-8 flex flex-col w-full h-full mt-4 md:mt-0">
+          <h3 class="font-semibold text-lg mb-4">Contact Us</h3>
+          <p class="text-sm text-gray-300">We're happy to answer any questions you have or provide you with an estimate. Just send us a message in the form below with any question you have.</p>
+          <div class="relative mb-4 mt-8">
+            <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+            <input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <div class="relative mb-4">
+            <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+            <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </div>
+          <div class="relative mb-4">
+            <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+            <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+          </div>
+          <button class="text-white bg-blue-500
+          hover:bg-blue-400 border-0 py-2 px-6 focus:outline-none rounded text-lg md:mb-4">Button</button>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact us -->
+
+    <!-- Start menu footer -->
+    <section class="">
+      <div class="border-t border-b border-gray-200 py-12 mt-16 px-4">
+        <div class="flex justify-center mb-8">
+          <img src="images/design/logo.svg" alt="Unlabs - Adalah sebuah website E-commerce" />
+        </div>
+        <aside class="container mx-auto">
+          <div class="flex md:flex-row flex-col md:space-x-4 justify-center">
+            <!-- Start item menu 1-->
+            <div class="w-ful md:w-2/12 mb-4 md:mb-0 accordion">
+              <h5 class="text-lg font-semibold mb-2 relative">
+                Overview
+              </h5>
+              <ul class="h-0 invisible md:h-auto md:visible overflow-hidden">
+                <li>
+                  <a href="#" class="hover:underline py-1 block">Shipping</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline py-1 block">Refund</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline py-1 block">Promotion</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End item menu 1-->
+
+            <!-- Start item menu 2-->
+            <div class="w-ful md:w-2/12 mb-4 md:mb-0 accordion">
+              <h5 class="text-lg font-semibold mb-2 relative">
+                Company
+              </h5>
+              <ul class="h-0 invisible md:h-auto md:visible overflow-hidden">
+                <li>
+                  <a href="#" class="hover:underline py-1 block">About</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline py-1 block">Career</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline py-1 block">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End item menu 2-->
+
+            <!-- Start item menu 3-->
+            <div class="w-ful md:w-2/12 mb-4 md:mb-0 accordion">
+              <h5 class="text-lg font-semibold mb-2 relative">
+                Explore
+              </h5>
+              <ul class="h-0 invisible md:h-auto md:visible overflow-hidden">
+                <li>
+                  <a href="#" class="hover:underline py-1 block">Term & Conds</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline py-1 block">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#" class="hover:underline py-1 block">For Developer</a>
+                </li>
+              </ul>
+            </div>
+            <!-- End item menu 3-->
+
+            <!-- Start item menu 4-->
+            <div class="w-ful md:w-3/12 mb-4 md:mb-0">
+              <h5 class="text-lg font-semibold mb-2 relative">
+                Special Letter
+              </h5>
+              <form action="#">
+                <input type="text" class="bg-gray-100 rounded-xl py-3 px-5 w-full focus:outline-none" placeholder="your@gmail.com" />
+                <label for="" class="relative w-full">
+                  <button class="bg-blue-400 absolute rounded-xl right-0 p-3">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M23.6177 0.412215C23.6163 0.410868 23.6152 0.409431 23.6138 0.408084C23.6124 0.406736 23.6109 0.405659 23.6095 0.404401C23.236 0.0495511 22.7002 -0.0570567 22.2098 0.126655L0.833871 8.13378C0.268743 8.34542 -0.0623361 8.87545 0.0098048 9.45254C0.0821332 10.0297 0.53462 10.4696 1.13589 10.5473L11.5833 11.8971C11.6028 11.8996 11.6185 11.9145 11.6212 11.9334L13.0301 21.9419C13.1112 22.5179 13.5704 22.9515 14.1729 23.0207C14.2279 23.027 14.2824 23.03 14.3364 23.03C14.8735 23.03 15.3486 22.7231 15.5495 22.2313L23.9077 1.75298C24.0994 1.28326 23.9882 0.770074 23.6177 0.412215ZM1.30534 9.34499C1.2819 9.34194 1.27136 9.34064 1.26728 9.30812C1.26325 9.27561 1.27319 9.27184 1.29508 9.26371L21.2946 1.77211L11.9404 10.7335C11.8794 10.7166 1.30534 9.34499 1.30534 9.34499ZM14.37 21.7894C14.3614 21.8104 14.358 21.8201 14.3236 21.816C14.2897 21.8122 14.2883 21.802 14.2852 21.7797C14.2852 21.7797 12.8535 11.6497 12.8358 11.5913L22.19 2.62996L14.37 21.7894Z" fill="#0077A6"/>
+                      </svg>                    
+                  </button>
+                </label>
+              </form>
+            </div>  
+            <!-- End item menu 4-->
+          </div>
+        </aside>
+      </div>
+    </section>
+    <!-- End menu footer -->
+
+    <!-- Start footer -->
+    <footer class="flex text-center px-4 py-8 justify-center">
+      <p class="text-sm">
+        Copyright 2021 • All Rights Reserved Unlabs by Renaldi
+      </p>
+    </footer>
+    <!-- End footer -->
+    
+    <!-- <div class="min-h-screen"></div> -->
+
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
     <script>

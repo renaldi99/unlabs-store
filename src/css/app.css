@@ -37,6 +37,28 @@
         transform: translateX(-75px) translateY(-50%);
         background-size: auto;
     }
+
+    .section-network {
+        background-color: #FFFFFF;
+    }
+
+    .card .card-shadow {
+        @apply transition duration-300 shadow-none h-full;
+    }
+
+    .card:hover .card-shadow {
+        @apply shadow-lg;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .card .overlay {
+        @apply justify-center;
+    }
+
+    .section-network p {
+        font-size: 16px;
+    }
 }
 
 @screen md {
@@ -49,4 +71,24 @@
         transform: translateX(-50%) translateY(-50%);
         background-size: auto;
     }
+}
+
+@layer utilities {
+    .stretched-link {
+        @apply absolute inset-0 z-10 cursor-pointer;
+    }
+
+    .grid {
+        grid-auto-flow: dense;
+        grid-auto-rows: minmax(180px, auto);
+    }
+}
+
+a.cart svg g circle.dot {
+    @apply hidden;
+}
+
+
+a.cart.cart-filled svg g circle.dot {
+    @apply block;
 }

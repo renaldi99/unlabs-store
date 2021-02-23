@@ -4,4 +4,6 @@ import "./menu-toggler";
 import "./modal";
 import "./anchor-link-smooth";
 import "./accordion";
+import "./slider";
+import "./shoppingCart";
 // import "./carousel";

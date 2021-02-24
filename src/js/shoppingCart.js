@@ -1,4 +1,3 @@
-import { stringify } from "postcss";
 import { addClass, removeClass } from "./utils-class";
 
 const cart = ["1", "2", "3"];

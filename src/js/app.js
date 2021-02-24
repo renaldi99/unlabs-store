@@ -6,4 +6,5 @@ import "./anchor-link-smooth";
 import "./accordion";
 import "./slider";
 import "./shoppingCart";
+import "./shippingDetail";
 // import "./carousel";

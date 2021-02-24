@@ -149,7 +149,7 @@
 
             <!-- Start cart empty wrapper-->
             <div id="cart-empty" class="hidden flex-col justify-center items-center py-4">
-              <img src="../images/content/Empty Inbox _Outline.svg" alt="Empty Cart">
+              <img src="./images/content/Empty Inbox _Outline.svg" alt="Empty Cart">
               <p class="text-lg font-semibold -mt-12 text-red-500 mb-2">Oops your cart is empty</p>
               <a href="index.html" class="hover:underline">Shop Now</a>
             </div>
@@ -159,7 +159,7 @@
             <div class="flex flex-start flex-wrap items-center mb-4 -mx-4" data-row="1">
               <div class="px-4 flex-none">
                 <div class="" style="width: 90px; height: 90px;">
-                  <img src="../images/content/product-detail.jpg" alt="Product Cart" class="object-cover rounded-xl w-full h-full">
+                  <img src="./images/content/product-detail.jpg" alt="Product Cart" class="object-cover rounded-xl w-full h-full">
                 </div>
               </div>
 
@@ -199,7 +199,7 @@
             <div class="flex flex-start flex-wrap items-center mb-4 -mx-4" data-row="2">
               <div class="px-4 flex-none">
                 <div class="" style="width: 90px; height: 90px;">
-                  <img src="../images/content/chair-bluerose.jpg" alt="Product Cart" class="object-cover rounded-xl w-full h-full">
+                  <img src="./images/content/chair-bluerose.jpg" alt="Product Cart" class="object-cover rounded-xl w-full h-full">
                 </div>
               </div>
 
@@ -239,7 +239,7 @@
             <div class="flex flex-start flex-wrap items-center mb-4 -mx-4" data-row="3">
               <div class="px-4 flex-none">
                 <div class="" style="width: 90px; height: 90px;">
-                  <img src="../images/content/chair-syail-amanta.jpg" alt="Product Cart" class="object-cover rounded-xl w-full h-full">
+                  <img src="./images/content/chair-syail-amanta.jpg" alt="Product Cart" class="object-cover rounded-xl w-full h-full">
                 </div>
               </div>
 
@@ -278,9 +278,9 @@
           <!-- End shippingCart -->
 
           <!-- Start shippingDetails -->
-          <div class="w-full md:px-4 md:w-4/12">
+          <div class="w-full md:px-4 md:w-4/12" id="shipping-details">
             <div class="bg-gray-100 px-4 py-6 md:p-8 md:rounded-3xl">
-              <form action="#">
+              <form action="success.html">
                 <div class="flex flex-start mb-6">
                   <h3 class="text-2xl">
                     Shipping Details
@@ -289,28 +289,28 @@
                 <!-- Start Inpui Name -->
                 <div class="flex flex-col mb-4">
                   <label for="complete-name" class="text-sm mb-2">Complete Name</label>
-                  <input type="text" id="complete-name" class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none" placeholder="Input your name" />
+                  <input data-input type="text" id="complete-name" class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none" placeholder="Input your name" />
                 </div>
                 <!-- End Inpui Name -->
 
                 <!-- Start Email Address -->
                 <div class="flex flex-col mb-4">
                   <label for="email-address" class="text-sm mb-2">Email Address</label>
-                  <input type="email" id="email-address" class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none" placeholder="Input your email" />
+                  <input data-input type="email" id="email-address" class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none" placeholder="Input your email" />
                 </div>
                 <!-- End Email Address -->
 
                 <!-- Start Address -->
                 <div class="flex flex-col mb-4">
                   <label for="address" class="text-sm mb-2">Address</label>
-                  <textarea type="text" id="address" class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none resize-none" placeholder="Input your address"></textarea>
+                  <input data-input rows="5" cols="10" type="text" id="address" class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none resize-none" placeholder="Input your address">
                 </div>
                 <!-- End Address -->
 
                 <!-- Start Email Address -->
                 <div class="flex flex-col mb-4">
                   <label for="phone-number" class="text-sm mb-2">Phone Number</label>
-                  <input type="tel" id="phone-number" class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none" placeholder="Input your number" />
+                  <input data-input type="tel" id="phone-number" class="border border-gray-200 rounded-lg px-4 py-2 bg-white text-sm focus:border-blue-200 focus:outline-none" placeholder="Input your number" />
                 </div>
                 <!-- End Email Address -->
 
@@ -320,16 +320,16 @@
                   <div class="flex -mx-2 flex-wrap">
                     <!-- Start Courier 1 -->
                     <div class="px-2 w-6/12 h-24 mb-4">
-                      <button type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
-                        <img src="../images/content/courier/Logo Gojek.png" alt="Logo Gojek" class="object-contain max-h-full">
+                      <button data-value="gojek" data-name="courier" type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                        <img src="./images/content/courier/Logo Gojek.png" alt="Logo Gojek" class="object-contain max-h-full">
                       </button>
                     </div>
                     <!-- End Courier 1 -->
 
                     <!-- Start Courier 2 -->
                     <div class="px-2 w-6/12 h-24 mb-4">
-                      <button type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
-                        <img src="../images/content/courier/Logo JNE.png" alt="Logo JNE" class="object-contain max-h-full">
+                      <button data-value="jne" data-name="courier" type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                        <img src="./images/content/courier/Logo JNE.png" alt="Logo JNE" class="object-contain max-h-full">
                       </button>
                     </div>
                     <!-- End Courier 2 -->
@@ -343,32 +343,32 @@
                   <div class="flex -mx-2 flex-wrap">
                     <!-- Start Payment 1 -->
                     <div class="px-2 w-6/12 h-24 mb-4">
-                      <button type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
-                        <img src="../images/content/payment/Logo OVO.png" alt="Logo OVO" class="object-contain max-h-full">
+                      <button data-value="ovo" data-name="payment" type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                        <img src="./images/content/payment/Logo OVO.png" alt="Logo OVO" class="object-contain max-h-full">
                       </button>
                     </div>
                     <!-- End Payment 1 -->
 
                     <!-- Start Payment 2 -->
                     <div class="px-2 w-6/12 h-24 mb-4">
-                      <button type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
-                        <img src="../images/content/payment/Logo Shopeepay.png" alt="Logo Shopeepay" class="object-contain max-h-full">
+                      <button data-value="shopeepay" data-name="payment" type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                        <img src="./images/content/payment/Logo Shopeepay.png" alt="Logo Shopeepay" class="object-contain max-h-full">
                       </button>
                     </div>
                     <!-- End Payment 2 -->
                     
                     <!-- Start Payment 3 -->
                     <div class="px-2 w-6/12 h-24 mb-4">
-                      <button type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
-                        <img src="../images/content/payment/Logo Mastercard.png" alt="Logo Mastercard" class="object-contain max-h-full">
+                      <button data-value="mastercard" data-name="payment" type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                        <img src="./images/content/payment/Logo Mastercard.png" alt="Logo Mastercard" class="object-contain max-h-full">
                       </button>
                     </div>
                     <!-- End Payment 3 -->
                     
                     <!-- Start Payment 4 -->
                     <div class="px-2 w-6/12 h-24 mb-4">
-                      <button type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
-                        <img src="../images/content/payment/Logo BTC.png" alt="Logo BTC" class="object-contain max-h-full">
+                      <button data-value="btc" data-name="payment" type="button" class="border border-gray-200 focus:outline-none focus:border-red-200 flex items-center justify-center rounded-xl bg-white w-full h-full">
+                        <img src="./images/content/payment/Logo BTC.png" alt="Logo BTC" class="object-contain max-h-full">
                       </button>
                     </div>
                     <!-- End Payment 4 -->
@@ -377,7 +377,7 @@
                 <!-- End Payment -->
 
                 <div class="text-center">
-                  <button type="submit" class="w-full rounded-xl bg-gray-300 focus:text-black focus:bg-red-200 text-gray-400 focus:outline-none px-6 py-3 transition-all duration-200">
+                  <button disabled type="submit" class="w-full rounded-xl bg-blue-400 focus:text-black focus:bg-blue-500 text-black focus:outline-none px-6 py-3 transition-all duration-200">
                     Checkout Now
                   </button>
                 </div>

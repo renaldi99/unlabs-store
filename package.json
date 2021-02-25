@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "full": "^1.0.1",
+    "owl.carousel": "^2.3.4",
     "webpack-dev-middleware": "^3.7.2"
   }
 }

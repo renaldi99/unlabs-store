@@ -35,12 +35,12 @@ for (let index = 0; index < options.length; index++) {
 }
 
 function check() {
-  console.log(data);
+  // console.log(data);
   const find = Object.values(data).filter((item) => item === "");
   if (find.length === 0) {
-    console.log(
-      document.querySelector("#shipping-details button[type='submit']")
-    );
+    // console.log(
+    //   document.querySelector("#shipping-details button[type='submit']")
+    // );
     document.querySelector(
       "#shipping-details button[type='submit']"
     ).disabled = false;

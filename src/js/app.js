@@ -10,4 +10,5 @@ import "./slider";
 import "./shoppingCart";
 import "./shippingDetail";
 import "./slideProduct";
+import "./type";
 // import "./carousel";
